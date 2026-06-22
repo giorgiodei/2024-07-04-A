@@ -32,8 +32,14 @@ class View(ft.UserControl):
         self.ddyear = ft.Dropdown(label="Anno",
                                   hint_text="Anno da analizzare per gli avvistamenti.")
 
+        self._controller.fillDDYear(self.ddyear)
+
+
         self.ddshape = ft.Dropdown(label="Shape",
                                    hint_text="Shape da analizzare per gli avvistamenti.")
+
+        self._controller.fillDDShapes(self.ddshape)
+
         self.btn_graph = ft.ElevatedButton(text="Crea Grafo",
                                            tooltip="Crea il grafo del punto 1",
                                            on_click=self._controller.handle_graph)
